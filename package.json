@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/juanma77/typescritpt-redux/issues"
   },
-  "homepage": "https://github.com/juanma77/typescritpt-redux#readme"
+  "homepage": "https://github.com/juanma77/typescritpt-redux#readme",
+  "dependencies": {
+    "ts-node": "^8.10.2"
+  }
 }
