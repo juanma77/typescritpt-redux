@@ -7,11 +7,22 @@ interface Action {
 // El reducer toma como argumento el estado actual de la aplicación y una acción; y siempre regresa un estado
 const reducer = ( state = 10, action: Action ) =>{
 
-    if( action.type === 'INCREMENTAR' ) {
-        return state + 1; 
-    }
+    switch( action.type ){
+        case 'INCREMENTAR':
+            return state + 1;
+        case 'DECREMENTAR':
+            return state - 1;
 
-    return state; 
+        case 'MULTIPLICAR':
+            return state * action.payload;
+
+        case 'DIVIDIR':
+            return state / action.payload;    
+
+        default:
+            return state;
+            
+    }
 }
 
 // Utilizamos el reducer 
@@ -21,7 +32,23 @@ const incrementarAction: Action = {
     type: 'INCREMENTAR'
 };
 
-console.log( reducer(10, incrementarAction) ); 
+const decrementarAction: Action = {
+    type: 'DECREMENTAR'
+};
 
+const multiplicarAction: Action = {
+    type: 'MULTIPLICAR',
+    payload: 2
+};
+
+const dividirAction: Action = {
+    type: 'DIVIDIR',
+    payload: 2
+};
+
+console.log( reducer(10, incrementarAction) ); 
+console.log( reducer(10, decrementarAction) ); 
+console.log( reducer(10, multiplicarAction) ); 
+console.log( reducer(10, dividirAction) ); 
 
 
