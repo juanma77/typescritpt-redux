@@ -1,0 +1,24 @@
+{
+  "name": "typescritpt-redux",
+  "version": "1.0.0",
+  "description": "A project using redux and typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanma77/typescritpt-redux.git"
+  },
+  "keywords": [
+    "typescript",
+    "node",
+    "redux"
+  ],
+  "author": "Juan Manuel Lopez Santana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanma77/typescritpt-redux/issues"
+  },
+  "homepage": "https://github.com/juanma77/typescritpt-redux#readme"
+}
