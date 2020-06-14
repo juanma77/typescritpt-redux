@@ -1,7 +1,7 @@
 import { Action } from "../ngrx/ngrx";
 import { incrementarAction, decrementarAction, multiplicarAction, dividirAction, resetAction } from "./contador.actions";
 
-// El reducer toma como argumento el estado actual de la aplicación y una acción; y siempre regresa un estado
+// El reducer toma como argumento el estado actual de la aplicación y una acción; siempre regresa un estado y generalmente se utiliza un switch en él 
 export const contadorReducer = ( state = 10, action: Action ) =>{
 
     switch( action.type ){
