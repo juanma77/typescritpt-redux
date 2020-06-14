@@ -1,8 +1,8 @@
-import { Action } from "./ngrx/ngrx";
-import { incrementarAction, decrementarAction, multiplicarAction, dividirAction, resetAction } from "./contador/contador.actions";
+import { Action } from "../ngrx/ngrx";
+import { incrementarAction, decrementarAction, multiplicarAction, dividirAction, resetAction } from "./contador.actions";
 
 // El reducer toma como argumento el estado actual de la aplicación y una acción; y siempre regresa un estado
-const reducer = ( state = 10, action: Action ) =>{
+export const contadorReducer = ( state = 10, action: Action ) =>{
 
     switch( action.type ){
         case 'INCREMENTAR':
@@ -25,8 +25,8 @@ const reducer = ( state = 10, action: Action ) =>{
     }
 }
 
-console.log( reducer(10, incrementarAction) ); 
-console.log( reducer(10, decrementarAction) ); 
-console.log( reducer(10, multiplicarAction) ); 
-console.log( reducer(10, dividirAction) ); 
-console.log( reducer(10, resetAction) ); 
+console.log( contadorReducer(10, incrementarAction) ); 
+console.log( contadorReducer(10, decrementarAction) ); 
+console.log( contadorReducer(10, multiplicarAction) ); 
+console.log( contadorReducer(10, dividirAction) ); 
+console.log( contadorReducer(10, resetAction) ); 
